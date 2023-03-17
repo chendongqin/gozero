@@ -1,0 +1,29 @@
+syntax = "v1"
+
+info(
+	title: "ark-admin-zero"
+	desc: "ark-admin-zero"
+	author: "Trevor"
+	email: "trevorlan@163.com"
+	version: "v1.0.0"
+)
+
+// 全局共用结构体
+import "desc/common.api"
+
+// 用户公共模块
+import "desc/user/user.api"
+
+// 系统管理模块
+import "desc/sys/menu.api"
+import "desc/sys/storemenu.api"
+import "desc/sys/role.api"
+import "desc/sys/dept.api"
+import "desc/sys/job.api"
+import "desc/sys/profession.api"
+import "desc/sys/user.api"
+import "desc/config/dict.api"
+import "desc/log/log.api"
+
+//通用模块
+import "desc/common/oss.api"

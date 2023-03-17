@@ -1,0 +1,78 @@
+Name: api
+Host: 0.0.0.0
+Port: 9501
+Mode: dev
+Timeout: 600000
+Salt: E41D0C55E
+
+Log:
+  Mode: console
+  Path: data/logs/admin
+  Level: info
+  Encoding: json
+  KeepDays: 7
+
+JwtAuth:
+  AccessSecret: 07DD9A182EAC1E6
+  AccessExpire: 86400
+
+GormConfig:
+  DataSource: root:root@tcp(localhost:3306)/gozero_mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+  MaxIdleConns: 10
+  MaxOpenConns: 100
+  ConnMaxLifetime: 60
+  LogLevel: 4 #日志等级，Silent 1; Error  log 2// Warn  log 3// Info log 4
+WriteGormConfig:
+  DataSource: root:root@tcp(localhost:3306)/gozero_mall?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+  MaxIdleConns: 10
+  MaxOpenConns: 100
+  ConnMaxLifetime: 60
+  LogLevel: 4 #日志等级，Silent 1; Error  log 2// Warn  log 3// Info log 4
+CacheRedisCluster:
+  - Host: 127.0.0.1:6379
+    Pass:
+    Type: node
+
+CacheErrFile: '/rediserror/test.rpc.txt'
+
+Redis:
+  Host: 127.0.0.1:6379
+  Pass: ""
+  Type: node
+
+Aliyum:
+  AccessKey:
+  AccessSecret:
+  SignName:
+  SmsCodeTemplate:
+  
+TaskChanel:
+  AiYl:
+    AppKey:
+    AppSecret:
+  BBTuan:
+    AppId:
+    AppKey:
+  DuoYou:
+    AppId:
+    AppSecret:
+  MTZQian:
+    AppId:
+    AppSecret:
+  MoGu:
+    AppId:
+    AppSecret:
+  Tj91:
+    MtID:
+    AppKey:
+  XianWan:
+    AppKey:
+
+Alipay:
+  AppId: ''
+  PrivateKey: ''
+  CertPathApp: ''
+  CertPathRoot: ''
+  CertPathAli: ''
+  NotifyUrl: ''
+  ReturnUrl: ''

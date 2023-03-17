@@ -1,0 +1,79 @@
+Name: cronjob
+#Host: 0.0.0.0
+#Port: 3701
+Mode: dev
+
+Log:
+  Mode: console
+  Path: data/logs/admin
+  Level: info
+  Encoding: plain
+  KeepDays: 7
+
+JwtAuth:
+  AccessSecret: 07DD9A182EAC1878
+  AccessExpire: 259200000
+
+GormConfig:
+  DataSource: root:root@tcp(127.0.0.1:3306)/task_dev?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+  MaxIdleConns: 10
+  MaxOpenConns: 100
+  ConnMaxLifetime: 28000
+  LogLevel: 4 #日志等级，Silent 1; Error  log 2// Warn  log 3// Info log 4
+WriteGormConfig:
+  DataSource: root:root@tcp(127.0.0.1:3306)/task_dev?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+  MaxIdleConns: 10
+  MaxOpenConns: 100
+  ConnMaxLifetime: 28000
+  LogLevel: 4 #日志等级，Silent 1; Error  log 2// Warn  log 3// Info log 4
+
+CacheRedisCluster:
+  - Host: 127.0.0.1:6379
+    Pass:
+    Type: node
+
+CacheErrFile: '/rediserror/test.api.txt'
+
+Redis:
+  Host: 127.0.0.1:6379
+  Pass:
+  Type: node
+
+Oss:
+  OssUrl:
+  AccessKeyId:
+  AccessKeySecret:
+  Endpoint: oss-cn-fuzhou.aliyuncs.com
+  Bucket:
+  CallbackUrl:
+
+TaskChanel:
+  AiYl:
+    AppKey:
+    AppSecret:
+  BBTuan:
+    AppId:
+    AppKey:
+  DuoYou:
+    AppId:
+    AppSecret:
+  MTZQian:
+    AppId:
+    AppSecret:
+  MoGu:
+    AppId:
+    AppSecret:
+  Tj91:
+    MtID:
+    AppKey:
+  XianWan:
+    AppKey:
+
+Alipay:
+  AppId: ''
+  PrivateKey: ''
+  CertPathApp: ''
+  CertPathRoot: ''
+  CertPathAli: ''
+  NotifyUrl: ''
+  ReturnUrl: ''

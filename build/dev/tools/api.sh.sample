@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+#dir=$1
+#api=$2
+#
+## shellcheck disable=SC2086
+#goctl api go -api "${dir}"/${api} -dir ${dir} -home "D:\zhihuigu\zhg-admin/build/dev/goctl"
+
+goctl api go -api "D:\zhihuigu\gozero-mall/app/cmd/admin/admin.api" -dir "D:\zhihuigu\gozero-mall/app/cmd/admin" -home "D:\zhihuigu\gozero_api/build/dev/admingoctl/1.4.0"

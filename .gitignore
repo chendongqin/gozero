@@ -1,0 +1,11 @@
+.idea
+/data/
+/app/cmd/admin/etc/*.yaml
+/build/dev/tools/*.sh
+/app/cmd/adminapi/*.exe
+app/cmd/adminapi/*.exe
+/service/test/
+/build/adskin/*.sh
+/app/cmd/api/etc/*.yaml
+/app/cmd/cronjob/etc/*.yaml
+/app/cmd/adminwebscoket/etc/*.yaml

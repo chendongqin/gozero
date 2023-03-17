@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+mysql="root:7u8i9o0p@tcp(119.23.206.144:3306)/myshoptest"
+table=$1
+dir=$2
+
+goctl model mysql datasource -url="${mysql}" -table="${table}" -c -dir "${dir}" -home "D:\zhihuigu\gozero-mall/build/dev/goctlgorm"
+#goctl model mysql datasource -url="root:7u8i9o0p@tcp(119.23.206.144:3306)/myshoptest" -table="*" -c -dir "D:\zhihuigu\zhg-admin\app\admin\model" -home "D:\zhihuigu\zhg-admin/build/dev/goctlgorm"

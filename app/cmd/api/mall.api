@@ -1,0 +1,30 @@
+syntax = "v1"
+
+info(
+	title: "ark-admin-zero"
+	desc: "ark-admin-zero"
+	author: "Trevor"
+	email: "trevorlan@163.com"
+	version: "v1.0.0"
+)
+
+// 全局共用结构体
+import "desc/common.api"
+
+//通用接口
+import "desc/common/common.api"
+
+// 回调接口
+import "desc/common/callback.api"
+import "desc/common/paycallback.api"
+
+//task接口
+import "desc/task/log.api"
+import "desc/task/tj91.api"
+import "desc/task/aiyl.api"
+
+//用户相关
+import "desc/user/login.api"
+import "desc/user/finance.api"
+import "desc/user/user.api"
+import "desc/user/withdraw.api"

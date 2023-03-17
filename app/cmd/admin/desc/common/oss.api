@@ -1,0 +1,73 @@
+syntax = "v1"
+
+info(
+    title: "oss"
+    desc: "oss"
+    author: "Donci"
+    email: "chendq@gjzhg.com"
+)
+
+type (
+    GetOssTokenReq {
+        FileType string `form:"fileType"`
+    }
+
+    PolicyToken {
+        AccessKeyId string `json:"accessid"`
+        Host string `json:"host"`
+        Expire int64 `json:"expire"`
+        Signature string `json:"signature"`
+        Policy string `json:"policy"`
+        Directory string `json:"dir"`
+        Callback string `json:"callback"`
+    }
+
+    GetOssTokenResp {
+        PolicyToken PolicyToken `json:"policyToken"`
+        OssUrl string `json:"ossUrl"`
+        bucketName string `json:"bucketName"`
+        Endpoint string `json:"endpoint"`
+    }
+)
+
+type (
+    OssCallackReq {
+        Filename    string `json:"filename"`
+        TmpKey      string `json:"tmpKey"`
+        Class       string `json:"class"`
+        UserId      int64  `json:"userId"`
+    }
+    OssCallackResp {
+        Src    string `json:"src"`
+    }
+)
+
+
+@server(
+    jwt: JwtAuth
+    group : common
+    prefix : /admin/common
+    middleware: PermMenuAuth
+)
+service admin-api {
+    @doc(
+        summary: "获取STS凭证"
+    )
+    @handler GetOssToken
+    get /oss/token (GetOssTokenReq) returns (GetOssTokenResp)
+
+}
+
+@server(
+    group : common
+    prefix : /admin/common
+    middleware: PermMenuAuth
+)
+service admin-api {
+    @doc(
+        summary: "oss回调校验"
+    )
+    @handler OssCallback
+    post /oss/callback (OssCallackReq) returns (OssCallackResp)
+
+}

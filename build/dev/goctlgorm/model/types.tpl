@@ -1,0 +1,4 @@
+
+type {{.upperStartCamelObject}} struct {
+    {{.fields}}
+}

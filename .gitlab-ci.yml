@@ -1,0 +1,23 @@
+stages:
+  #  - build
+  - dbmigration
+  - publish
+
+
+#publish_test_job:
+#  tags:
+#    - shopAdminGo2
+#  stage: publish
+#  only:
+#    - dev
+#  script:
+#    - cd .app/admin/cmd/adminapi
+#    - go build -o /opt/shop-admin-go/admin core.go
+#    - scp /opt/shop-admin-go/admin root@119.23.206.144:/services/web/shop-admin-go/tmp
+#    - ssh root@119.23.206.144 rm /services/web/shop-admin-go/admin
+#    - ssh root@119.23.206.144 cp /services/web/shop-admin-go/tmp /services/web/shop-admin-go/admin
+#    - ssh root@119.23.206.144 chmod +x /services/web/shop-admin-go/admin
+#    - ssh root@119.23.206.144 /services/web/shop-admin-go/admin-server.sh
+#    - rm -rf /opt/shop-admin-go/admin
+
+
